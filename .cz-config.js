@@ -24,17 +24,7 @@ module.exports = {
     { value: 'WIP', name: 'WIP:      Work in progress' },
   ],
 
-  scopes: [
-    { name: 'bpnm-service-service' },
-    { name: 'dummy-mail-service-service' },
-    { name: 'notification-service-service' },
-    { name: 'chat-service-service' },
-    { name: 'auth-facade-facade' },
-    { name: 'auth-service-service' },
-    { name: 'ci-cd' },
-    { name: 'deps' },
-    { name: 'migrations' },
-  ],
+  scopes: [],
 
   appendBranchNameToCommitMessage: false,
   allowTicketNumber: false,
