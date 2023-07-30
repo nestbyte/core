@@ -16,4 +16,12 @@ describe('HealthController', () => {
   it('should be defined', () => {
     expect(controller).toBeDefined();
   });
+
+  describe('Health [/health]', () => {
+    describe('when called', () => {
+      it('should respond with OK', () => {
+        expect(controller.check()).toEqual({ status: 'OK' });
+      });
+    });
+  });
 });
