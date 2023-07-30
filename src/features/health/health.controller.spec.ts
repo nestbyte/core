@@ -1,5 +1,6 @@
 import { Test, TestingModule } from '@nestjs/testing';
 import { HealthController } from './health.controller';
+import { describe, beforeEach, it, expect } from 'vitest';
 
 describe('HealthController', () => {
   let controller: HealthController;
