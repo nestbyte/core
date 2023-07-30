@@ -1,7 +1,7 @@
 import { Test, TestingModule } from '@nestjs/testing';
 import { HealthController } from './health.controller';
 import { beforeEach, describe, expect, it } from 'vitest';
-import { NestbyteLogger, NestbyteLoggerModule } from '../../logger';
+import { NestbyteLoggerModule } from '../../logger';
 
 describe('HealthController', () => {
   let controller: HealthController;
