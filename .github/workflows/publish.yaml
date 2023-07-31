@@ -4,7 +4,7 @@ on:
         types: [ published ]
 
 jobs:
-    build:
+    publish:
         runs-on: ubuntu-latest
         steps:
             -   uses: actions/checkout@v3
@@ -19,6 +19,6 @@ jobs:
             -   name: Install Dependencies
                 run: pnpm install --frozen-lockfile
             -   name: Publish to npm
-                run: pnpm publish
+                run: pnpm publish --no-git-checks
                 env:
                     NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
