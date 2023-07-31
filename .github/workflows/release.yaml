@@ -1,4 +1,4 @@
-name: Publish Package to npmjs
+name: Release
 on:
   workflow_dispatch:
 
@@ -16,7 +16,7 @@ jobs:
           version: 8
       - uses: actions/setup-node@v3
         with:
-          node-version: '16.x'
+          node-version: '18.x'
           registry-url: 'https://registry.npmjs.org'
           scope: '@nestbyte'
       - name: Install Dependencies
