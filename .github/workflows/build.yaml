@@ -16,7 +16,7 @@ jobs:
                     node-version: 16
                     cache: 'pnpm'
             -   name: Install Dependencies
-                run: ls
+                run: pnpm install --frozen-lockfile
 
             -   name: Lint
                 run: pnpm lint
