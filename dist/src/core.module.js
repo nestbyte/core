@@ -10,13 +10,13 @@ exports.CoreModule = void 0;
 const common_1 = require("@nestjs/common");
 const health_module_1 = require("./features/health/health.module");
 const passport_1 = require("@nestjs/passport");
-const nestbyte_logger_module_1 = require("./logger/nestbyte-logger/nestbyte-logger.module");
+const logger_1 = require("./logger");
 let CoreModule = exports.CoreModule = class CoreModule {
 };
 exports.CoreModule = CoreModule = __decorate([
     (0, common_1.Global)(),
     (0, common_1.Module)({
-        imports: [health_module_1.HealthModule, passport_1.PassportModule, nestbyte_logger_module_1.NestbyteLoggerModule],
+        imports: [health_module_1.HealthModule, passport_1.PassportModule, logger_1.NestbyteLoggerModule],
         controllers: [],
         providers: [],
         exports: [],
