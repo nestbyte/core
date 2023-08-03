@@ -1,7 +1,7 @@
 import { Global, Module } from '@nestjs/common';
 import { HealthModule } from './features/health/health.module';
 import { PassportModule } from '@nestjs/passport';
-import { NestbyteLoggerModule } from './logger/nestbyte-logger/nestbyte-logger.module';
+import { NestbyteLoggerModule } from './logger';
 
 @Global()
 @Module({
