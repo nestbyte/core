@@ -26,6 +26,12 @@ jobs:
         run: pnpm install --frozen-lockfile
       - name: Build
         run: pnpm build
+      - name: Authentication with registry
+        run: |
+          echo "@aryanshmahato:registry=https://registry.npmjs.org/" > .npmrc
+          echo "registry=https://registry.npmjs.org/" >> .npmrc
+          echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> .npmrc
+          npm whoami
       - name: Publish to npm
         run: npx semantic-release --ci
         env:
