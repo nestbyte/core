@@ -12,7 +12,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
         with:
-          persist-credential: false
+          token: ${{ secrets.SEMANTIC_RELEASE_GITHUB_TOKEN }}
       - uses: pnpm/action-setup@v2
         with:
           version: 8
