@@ -8,22 +8,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var __param = (this && this.__param) || function (paramIndex, decorator) {
-    return function (target, key) { decorator(target, key, paramIndex); }
-};
-var HealthController_1;
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.HealthController = void 0;
 const common_1 = require("@nestjs/common");
 const swagger_1 = require("@nestjs/swagger");
-const logger_1 = require("../../logger");
-let HealthController = exports.HealthController = HealthController_1 = class HealthController {
-    constructor(logger) {
-        this.logger = logger;
-        this.logger.setContext(HealthController_1.name);
-    }
+let HealthController = exports.HealthController = class HealthController {
     check() {
-        this.logger.log('Health check');
         return {
             status: 'OK',
         };
@@ -35,10 +25,8 @@ __decorate([
     __metadata("design:paramtypes", []),
     __metadata("design:returntype", void 0)
 ], HealthController.prototype, "check", null);
-exports.HealthController = HealthController = HealthController_1 = __decorate([
+exports.HealthController = HealthController = __decorate([
     (0, common_1.Controller)('health'),
-    (0, swagger_1.ApiTags)('Health'),
-    __param(0, (0, common_1.Inject)(logger_1.NestbyteLogger)),
-    __metadata("design:paramtypes", [logger_1.NestbyteLogger])
+    (0, swagger_1.ApiTags)('Health')
 ], HealthController);
 //# sourceMappingURL=health.controller.js.map
