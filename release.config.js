@@ -6,7 +6,7 @@ const config = {
     [
       '@semantic-release/git',
       {
-        assets: ['dist/**/*', 'package.json'],
+        assets: ['CHANGELOG.mod', 'package.json'],
         message:
           'chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}',
       },
